@@ -18,26 +18,14 @@ let userDetails = document.querySelector(".user-details")
 let mode = document.querySelector(".mode")
 let body = document.querySelector("body")
 let h2 = document.querySelector("h2")
-let h3 = document.querySelector("h3")
-let searchbar = document.querySelector(".search-bar")
-let main = document.querySelector("main")
-let insights = document.querySelector("insights")
+let moon = document.querySelector(".moon")
+
 
 mode.addEventListener("click", () => {
-    body.classList.toggle("darkbody")
-    h2.classList.toggle("darkcontent")
-    searchbar.classList.toggle("darksearch")
-    input.classList.toggle("darksearch")
-    userDetails.classList.toggle("darksearch")
-    h3.classList.toggle("darkcontent")
-    joined.classList.toggle("darkcontent")
-    biio.classList.toggle("darkcontent")
-    locationn.classList.toggle("darkcontent")
-    urll.classList.toggle("darkcontent")
-    twitt.classList.toggle("darkcontent")
-    buildingg.classList.toggle("darkcontent")
-    insights.classList.toggle("darkcontent")
-    
+    body.classList.toggle("darkmode")
+    input.classList.toggle("darkmode-input")    
+    button.classList.toggle("darkmode-button") 
+    moon.classList.toggle("mooon") 
 })
 
 
@@ -55,6 +43,7 @@ async function fetchUser(){
             userDetails.innerHTML=data.message;
             return
             }
+            console.log(button)
 
         const {avatar_url, name, login, created_at, bio, public_repos, followers, following, location, url, twitter_username, company } = data
         const createdDate = new Date (data.created_at) 
@@ -69,7 +58,7 @@ async function fetchUser(){
         followerss.innerHTML = `${followers}`
         followingg.innerHTML = `${following}`
         locationn.innerHTML = `${location || "Not Available"}`
-        urll.innerHTML = `${url}`
+        urll.innerHTML = `${url.slice(0,25)}`
         twitt.innerHTML = `${twitter_username || "Not Available"}`
         buildingg.innerHTML = `${company ||"Not Available"}`
 

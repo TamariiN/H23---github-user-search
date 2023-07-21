@@ -1,0 +1,34 @@
+@media screen and (min-width:768px){
+
+    header{
+        width: 573px;
+        margin-top: 16%;
+        gap: 300px;
+    }
+    main, .search-bar, .user-details{
+        width: 573px;
+    }
+    input{
+        width: 365px;
+    }
+    .avatarr{
+        width: 117px;
+        height: 117px;
+    }
+    .name{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h3{
+        font-size: 26px;
+    }
+    p, .insights{
+        width: 493px;
+    }
+    .socials{
+        flex-direction: row;
+        gap: 50px;
+        margin-left: 30px;
+    }
+}

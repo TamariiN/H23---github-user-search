@@ -13,18 +13,27 @@
     --grey: #697C9A;
     --dblue:#4B6A9B;
     --black: #2B3442;
-    --bcgr:#F6F8FF;
-    --ddwhite:#FEFEFE;
+    --background:#F6F8FF;
     --white: #FFFFFF;
     --ddblack:#141D2F;
     --dblack:#1E2A47;
     --red: #F74646;
-
-    --darkmode: #141D2F;
-    --darkmodeb: #1E2A47;
-    --darkmodewhite: #FFFFFF;
+    
 }
-
+.darkmode{
+    --background: #141D2F;
+    --dblack: #FFFFFF;
+    --black: #FFFFFF;
+    --white: #1E2A47;
+    --grey: #FFFFFF;
+    --dblue: #FFFFFF;
+}
+.darkmode-input{
+    background-color: #1E2A47;
+}
+.darkmode-button{
+    color:white;
+}
 
 .sun{
     display: none;
@@ -33,7 +42,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--bcgr);
+    background-color: var(--background);
 }
 header{
     display: flex;
@@ -46,12 +55,18 @@ header{
     align-items: center;
     gap: 8px;
 }
+.mode:hover{
+    background-color: #dfecfa;
+    transition: 3s;
+    border-radius: 30px;
+    pointer-events:stroke;
+}
 .search-bar{
     margin-top: 35px;
     width: 327px;
     height: 60px;
     border-radius: 15px;
-    background: #FEFEFE;
+    background-color: var(--white);
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.20);
 
     display: flex;
@@ -62,7 +77,7 @@ button{
     width: 84px;
     height: 46px;
     border-radius: 10px;
-    background: var(--blue);
+    background-color: var(--blue);
     border: none;
     color: var(--white);
 }
@@ -75,7 +90,7 @@ input{
     margin-top: 16px;
     width: 327px;
     border-radius: 15px;
-    background: #FEFEFE;
+    background-color: var(--white);
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.20);
 
     display: flex;
@@ -103,7 +118,7 @@ input{
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
-    background-color: #F6F8FF;
+    background-color: var(--background);
 }
 .repos, .followers, .following{
     display: flex;
@@ -131,7 +146,7 @@ input{
 
 h1{
     /* //devfinder */
-    color: var(--color);
+    color: var(--dblack);
     font-family: Space Mono;
     font-size: 26px;
     font-weight: 700;
@@ -139,7 +154,7 @@ h1{
 }
 h2{
     /* dark */
-    color: #4B6A9B;
+    color: var(--blue);
     text-align: right;
     font-size: 13px;
     font-weight: 700;
@@ -162,14 +177,14 @@ h4{
 }
 h5{
     /* triangel */
-    color: #4B6A9B;
+    color: var(--dblue);
     text-align: center;
     font-size: 11px;
     font-weight: 400;
     line-height: normal;
 }
 h6{
-    color: #4B6A9B;
+    color: var(--dblue);
     font-family: Space Mono;
     font-size: 13px;
     font-style: normal;
@@ -184,15 +199,6 @@ p{
     font-weight: 400;
     line-height: 25px;
 }
-
-.darkbody{
-    background-color: var(--darkmode);
-    color: var(--darkmodewhite);
-}
-.darksearch, .darkdetails{
-    background-color: var(--darkmodeb);
-    color: var(--darkmodewhite);
-}
-.darkcontent{
-    color: white;
+.mooon{
+    background-image: url(./assets/002-sun.svg);
 }
