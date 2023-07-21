@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+
+}
+:root{
+    --blue:#0079FF;
+    --grey: #697C9A;
+    --dblue:#4B6A9B;
+    --black: #2B3442;
+    --bcgr:#F6F8FF;
+    --ddwhite:#FEFEFE;
+    --white: #FFFFFF;
+    --ddblack:#141D2F;
+    --dblack:#1E2A47;
+    --red: #F74646;
+
+    --darkmode: #141D2F;
+    --darkmodeb: #1E2A47;
+    --darkmodewhite: #FFFFFF;
+}
+
+
+.sun{
+    display: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bcgr);
+}
+header{
+    display: flex;
+    margin-top: 31px;
+    justify-content: center;
+    gap: 65%;
+}
+.mode{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.search-bar{
+    margin-top: 35px;
+    width: 327px;
+    height: 60px;
+    border-radius: 15px;
+    background: #FEFEFE;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.20);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+button{
+    width: 84px;
+    height: 46px;
+    border-radius: 10px;
+    background: var(--blue);
+    border: none;
+    color: var(--white);
+}
+input{
+    width: 184px;
+    height: 25px;
+    border: none;
+}
+.user-details{
+    margin-top: 16px;
+    width: 327px;
+    border-radius: 15px;
+    background: #FEFEFE;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.20);
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding-left: 24px;
+    padding-top: 32px;
+
+    overflow:hidden
+
+}
+.avatarr{
+    width: 70px;
+    border-radius: 70px;
+}
+.avatar-names{
+    display: flex;
+    gap: 19px;
+}
+.insights{
+    width: 279px;
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #F6F8FF;
+}
+.repos, .followers, .following{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pin, .url, .twit, .building{
+    display: flex;
+    gap: 15px;
+}
+.socials{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-bottom: 49px;
+}
+.first-div, .second-div{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+
+
+
+h1{
+    /* //devfinder */
+    color: var(--color);
+    font-family: Space Mono;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: normal;
+}
+h2{
+    /* dark */
+    color: #4B6A9B;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.5px;
+}
+h3{
+    color: var(--black);
+    font-family: Space Mono;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+h4{
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+}
+h5{
+    /* triangel */
+    color: #4B6A9B;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+}
+h6{
+    color: #4B6A9B;
+    font-family: Space Mono;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+p{
+    width: 279px;
+    color: var(--dblue);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.darkbody{
+    background-color: var(--darkmode);
+    color: var(--darkmodewhite);
+}
+.darksearch, .darkdetails{
+    background-color: var(--darkmodeb);
+    color: var(--darkmodewhite);
+}
+.darkcontent{
+    color: white;
+}
