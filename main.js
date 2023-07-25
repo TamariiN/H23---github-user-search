@@ -14,6 +14,7 @@ let urll = document.querySelector(".urll")
 let twitt = document.querySelector(".twitt")
 let buildingg = document.querySelector(".buildingg")
 let userDetails = document.querySelector(".user-details")
+let errortext = document.querySelector(".error-text")
 
 let mode = document.querySelector(".mode")
 let body = document.querySelector("body")
@@ -40,11 +41,13 @@ async function fetchUser(){
         let data = await res.json()
 
         if(data.message) {
-            userDetails.innerHTML=data.message;
+            errortext.innerHTML=data.message;
+            errortext.style.display="block"
+            userDetails.style.display="none"
             return
             }
-            console.log(button)
 
+            console.log(button)
         const {avatar_url, name, login, created_at, bio, public_repos, followers, following, location, url, twitter_username, company } = data
         const createdDate = new Date (data.created_at) 
 
@@ -62,13 +65,15 @@ async function fetchUser(){
         twitt.innerHTML = `${twitter_username || "Not Available"}`
         buildingg.innerHTML = `${company ||"Not Available"}`
 
+        errortext.style.display="none"
+        userDetails.style.display="flex"
+
     }catch (error) {
         console.log(error)
     }
 
 
 }
-
 function getMonthString(monthNumber){
     switch(monthNumber){
         case 0: return "Jan";
